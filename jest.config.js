@@ -6,6 +6,15 @@ module.exports = {
   moduleFileExtensions: ['ts', 'js'],
   collectCoverage: true,
   collectCoverageFrom: ['./src/**/*.ts'],
+  coveragePathIgnorePatterns: ['-protocols.ts', 'index.ts'],
   coverageReporters: ['text', 'html'],
-  coverageDirectory: './coverage'
+  coverageDirectory: './coverage',
+  coverageThreshold: {
+    global: {
+      branches: 90,
+      functions: 90,
+      lines: 90,
+      statements: 90,
+    }
+  }
 };
