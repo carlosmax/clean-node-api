@@ -8,5 +8,6 @@ module.exports = {
   collectCoverageFrom: ['./src/**/*.ts'],
   coveragePathIgnorePatterns: ['-protocols.ts', 'index.ts'],
   coverageReporters: ['text', 'html'],
-  coverageDirectory: './coverage'
+  coverageDirectory: './coverage',
+  preset: '@shelf/jest-mongodb'
 };
