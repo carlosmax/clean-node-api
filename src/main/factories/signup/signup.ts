@@ -8,9 +8,9 @@ import { LogMongoRepository } from '../../../infra/db/mongodb/log-repository/log
 import { makeSignUpValidation } from './signup-validation';
 
 export const makeSignUpController = (): Controller => {
-  const encrypter = new BcryptAdapter(12);
+  const hasher = new BcryptAdapter(12);
   const accountMongoRepository = new AccountMongoRepository();
-  const addAccount = new DbAddAccount(encrypter, accountMongoRepository);
+  const addAccount = new DbAddAccount(hasher, accountMongoRepository);
   const signUpController = new SignUpController(addAccount, makeSignUpValidation());
   const logMongoRepository = new LogMongoRepository();
   return new LogControllerDecorator(signUpController, logMongoRepository);
