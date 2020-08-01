@@ -9,7 +9,8 @@ module.exports = {
     'class-methods-use-this': 'off',
     'import/prefer-default-export': 'off',
     'no-restricted-syntax': 0,
-    "lines-between-class-members": "off",
-    "@typescript-eslint/lines-between-class-members": 0
+    'lines-between-class-members': 'off',
+    '@typescript-eslint/lines-between-class-members': 0,
+    'max-len': 0
   }
 };
