@@ -10,7 +10,8 @@
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
-    "test:ci": "npm test --coverage"
+    "test:ci": "npm test -- --coverage",
+    "test:clearCache": "jest --clearCache" 
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "fast-glob": "^3.2.4",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.9",
     "validator": "^13.1.1"
   },
@@ -27,6 +29,7 @@
     "@types/bcrypt": "^3.0.0",
     "@types/express": "^4.17.7",
     "@types/jest": "^26.0.3",
+    "@types/jsonwebtoken": "^8.5.0",
     "@types/mongodb": "^3.5.25",
     "@types/node": "^14.0.14",
     "@types/supertest": "^2.0.10",
