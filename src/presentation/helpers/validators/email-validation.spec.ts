@@ -1,5 +1,4 @@
-import { ServerError, InvalidParamError } from '../../erros';
-import { serverError } from '../http/http-helper';
+import { InvalidParamError } from '../../erros';
 import { EmailValidation } from './email-validation';
 import { EmailValidator } from '../../protocols/email-validator';
 
@@ -23,7 +22,7 @@ const makeSut = (): SutTypes => {
 
   return {
     sut,
-    emailValidatorStub
+    emailValidatorStub,
   };
 };
 

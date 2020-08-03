@@ -1,7 +1,7 @@
 module.exports = {
   extends: ['airbnb-typescript/base'],
   parserOptions: {
-    project: './tsconfig.json'
+    project: './tsconfig.eslint.json'
   },
   rules: {
     'linebreak-style': ['error', (process.platform === 'win32' ? 'windows' : 'unix')],

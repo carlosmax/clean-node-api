@@ -1,10 +1,9 @@
+/* eslint-disable no-underscore-dangle */
+import { Collection } from 'mongodb';
 import { MongoHelper } from '../helpers/mongo-helper';
 import { AccountMongoRepository } from './account-mongo-repository';
-import { Collection } from 'mongodb';
 
-const makeSut = (): AccountMongoRepository => {
-  return new AccountMongoRepository();
-}
+const makeSut = (): AccountMongoRepository => new AccountMongoRepository();
 
 describe('Account Mongo Repository', () => {
   let accountCollection: Collection;
@@ -18,8 +17,8 @@ describe('Account Mongo Repository', () => {
   });
 
   beforeEach(async () => {
-    this.accountCollection = await MongoHelper.getCollection('accounts');
-    await this.accountCollection.deleteMany({});
+    accountCollection = await MongoHelper.getCollection('accounts');
+    await accountCollection.deleteMany({});
   });
 
   test('Should return an account on add success', async () => {
@@ -38,7 +37,7 @@ describe('Account Mongo Repository', () => {
 
   test('Should return an account on loadByEmail success', async () => {
     const sut = makeSut();
-    await this.accountCollection.insertOne({
+    await accountCollection.insertOne({
       name: 'any_name',
       email: 'any_email@mail.com',
       password: 'any_password',
@@ -59,14 +58,14 @@ describe('Account Mongo Repository', () => {
 
   test('Should update the account accessToken on updateAccessToken success', async () => {
     const sut = makeSut();
-    const result = await this.accountCollection.insertOne({
+    const result = await accountCollection.insertOne({
       name: 'any_name',
       email: 'any_email@mail.com',
       password: 'any_password',
     });
     expect(result.ops[0].accessToken).toBeFalsy();
     await sut.updateAccessToken(result.ops[0]._id, 'any_token');
-    const account = await this.accountCollection.findOne({ _id: result.ops[0]._id });
+    const account = await accountCollection.findOne({ _id: result.ops[0]._id });
     expect(account).toBeTruthy();
     expect(account.accessToken).toBe('any_token');
   });
