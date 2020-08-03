@@ -1,6 +1,6 @@
-import { MongoHelper } from "../helpers/mongo-helper";
-import { Collection } from 'mongodb'
-import { LogMongoRepository } from "./log-mongo-repository";
+import { Collection } from 'mongodb';
+import { MongoHelper } from '../helpers/mongo-helper';
+import { LogMongoRepository } from './log-mongo-repository';
 
 describe('Log Mongo Repository', () => {
   let errorCollection: Collection;
@@ -17,8 +17,8 @@ describe('Log Mongo Repository', () => {
     errorCollection = await MongoHelper.getCollection('errors');
     await errorCollection.deleteMany({});
   });
-  
-  test('Should create an error log on success', async() => {
+
+  test('Should create an error log on success', async () => {
     const sut = new LogMongoRepository();
     await sut.logError('any_error');
     const count = await errorCollection.countDocuments();
