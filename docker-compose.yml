@@ -5,14 +5,14 @@ services:
     image: mongo:3
     restart: always
     volumes: 
-      - ./data:/data/db
+      - ./data/db
     ports:
       - "27017:27017"
   api:
     container_name: api-container
-    build: .
-    restart: always
+    build: .    
     image: clean-node-api
+    restart: always
     command: npm start
     volumes: 
       - ./dist:/usr/src/clean-node-api/dist
