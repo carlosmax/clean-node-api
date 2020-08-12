@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // eslint-disable-next-line max-classes-per-file
 import { SignUpController } from './signup-controller';
-import { MissingParamError, ServerError } from '../../erros';
+import { MissingParamError, ServerError, EmailInUseError } from '../../erros';
 import { HttpRequest } from '../../protocols';
-import { ok, badRequest, serverError } from '../../helpers/http/http-helper';
+import {
+  ok, badRequest, serverError, forbidden
+} from '../../helpers/http/http-helper';
 import {
   AddAccount,
   AddAccountModel,
@@ -105,6 +107,13 @@ describe('SignUp Controller', () => {
     expect(httpResponse).toEqual(ok({
       accessToken: 'any_token'
     }));
+  });
+
+  test('Should return 403 if AddAccount returns null', async () => {
+    const { sut, addAccountStub } = makeSut();
+    jest.spyOn(addAccountStub, 'add').mockReturnValueOnce(new Promise((resolve) => resolve(null)));
+    const httpResponse = await sut.handle(makeFakeRequest());
+    expect(httpResponse).toEqual(forbidden(new EmailInUseError()));
   });
 
   test('Should call Validation with correct value', async () => {
