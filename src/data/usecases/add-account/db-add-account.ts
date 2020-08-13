@@ -22,7 +22,6 @@ export class DbAddAccount implements AddAccount {
 
     const hashedPassword = await this.hasher.hash(accountData.password);
     const tempAccount = { ...accountData, password: hashedPassword };
-    const newAccount = await this.addAccountRepository.add(tempAccount);
-    return new Promise((resolve) => resolve(newAccount));
+    return this.addAccountRepository.add(tempAccount);
   }
 }
