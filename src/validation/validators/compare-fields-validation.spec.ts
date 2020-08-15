@@ -1,5 +1,5 @@
 import { CompareFieldsValidation } from './compare-fields-validation';
-import { InvalidParamError } from '../../erros';
+import { InvalidParamError } from '../../presentation/erros';
 
 describe('Compare Fields Validation', () => {
   test('Should return a MissingParamError if validation fails', () => {
