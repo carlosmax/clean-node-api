@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // eslint-disable-next-line max-classes-per-file
 import { SignUpController } from './signup-controller';
-import { MissingParamError, ServerError, EmailInUseError } from '../../erros';
-import { HttpRequest } from '../../protocols';
+import { MissingParamError, ServerError, EmailInUseError } from '../../../erros';
+import { HttpRequest } from '../../../protocols';
 import {
   ok, badRequest, serverError, forbidden
-} from '../../helpers/http/http-helper';
+} from '../../../helpers/http/http-helper';
 import {
   AddAccount,
   AddAccountModel,

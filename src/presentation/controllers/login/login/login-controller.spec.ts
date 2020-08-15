@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable max-classes-per-file */
 import { LoginController } from './login-controller';
-import { MissingParamError } from '../../erros';
-import { AuthenticationModel } from '../../../domain/usecases/authentication';
+import { MissingParamError } from '../../../erros';
+import { AuthenticationModel } from '../../../../domain/usecases/authentication';
 import {
   badRequest,
   serverError,
   unauthorized,
   ok,
-} from '../../helpers/http/http-helper';
+} from '../../../helpers/http/http-helper';
 import {
   Authentication,
   HttpRequest,
