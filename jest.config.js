@@ -10,7 +10,7 @@ module.exports = {
     '!./src/main/**',
   ],
   coveragePathIgnorePatterns: ['-protocols.ts', 'index.ts'],
-  coverageReporters: ['text', 'html'],
+  coverageReporters: ['lcov'],
   coverageDirectory: './coverage',
   preset: '@shelf/jest-mongodb'
 };
