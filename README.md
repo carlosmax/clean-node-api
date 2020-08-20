@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/carlosmax/clean-node-api.svg?branch=master)](https://travis-ci.org/carlosmax/clean-node-api)
-
-[![Coverage Status](https://coveralls.io/repos/github/carlosmax/clean-node-api/badge.svg)](https://coveralls.io/github/carlosmax/clean-node-api)
+[![Build Status](https://travis-ci.org/carlosmax/clean-node-api.svg?branch=master)](https://travis-ci.org/carlosmax/clean-node-api) [![Coverage Status](https://coveralls.io/repos/github/carlosmax/clean-node-api/badge.svg)](https://coveralls.io/github/carlosmax/clean-node-api)
 
 ## Desenvolvido durante o treinamento NodeJs, Typescript, TDD, Clean Architecture e SOLID do professor Rodrigo Manguinho
 
