@@ -4,8 +4,8 @@ import {
   HttpResponse,
   Validation
 } from './add-survey-controller-protocols';
-import { badRequest, serverError, noContent } from '../../helpers/http/http-helper';
-import { AddSurvey } from '../../../domain/usecases/add-survey';
+import { badRequest, serverError, noContent } from '../../../helpers/http/http-helper';
+import { AddSurvey } from '../../../../domain/usecases/add-survey';
 
 export class AddSurveyController implements Controller {
   constructor(

@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import MockDate from 'mockdate';
 import { AddSurveyController } from './add-survey-controller';
-import { badRequest, serverError, noContent } from '../../helpers/http/http-helper';
+import { badRequest, serverError, noContent } from '../../../helpers/http/http-helper';
 import {
   HttpRequest, Validation, AddSurvey, AddSurveyModel
 } from './add-survey-controller-protocols';
