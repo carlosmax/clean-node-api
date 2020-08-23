@@ -12,5 +12,8 @@ module.exports = {
   coveragePathIgnorePatterns: ['-protocols.ts', 'index.ts'],
   coverageReporters: ['lcov'],
   coverageDirectory: './coverage',
-  preset: '@shelf/jest-mongodb'
+  preset: '@shelf/jest-mongodb',
+  moduleNameMapper: {
+    '@/(.*)': '<rootDir>/src/$1'
+  }
 };

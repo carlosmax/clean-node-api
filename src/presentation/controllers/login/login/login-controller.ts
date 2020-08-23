@@ -1,16 +1,16 @@
 import {
+  badRequest,
+  serverError,
+  ok,
+  unauthorized
+} from '@/presentation/helpers/http/http-helper';
+
+import {
   Controller,
   HttpRequest,
   HttpResponse,
   Authentication
 } from './login-controller-protocols';
-
-import {
-  badRequest,
-  serverError,
-  ok,
-  unauthorized
-} from '../../../helpers/http/http-helper';
 
 import { Validation } from '../signup/signup-controller-protocols';
 
