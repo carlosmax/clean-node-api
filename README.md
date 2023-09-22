@@ -1,12 +1,8 @@
 [![Build Status](https://travis-ci.org/carlosmax/clean-node-api.svg?branch=master)](https://travis-ci.org/carlosmax/clean-node-api) [![Coverage Status](https://coveralls.io/repos/github/carlosmax/clean-node-api/badge.svg)](https://coveralls.io/github/carlosmax/clean-node-api)
 
-## Desenvolvido durante o treinamento NodeJs, Typescript, TDD, Clean Architecture e SOLID do professor Rodrigo Manguinho
+## Projeto de estudo utilizando NodeJs, Typescript, TDD, Clean Architecture e SOLID.
 
-#### Link para o repositório do professor
-
-[Repositório do Curso](https://github.com/rmanguinho/clean-ts-api)
-
-> ## APIs construídas no treinamento
+> ## APIs construídas
 
 1. [Cadastro](./requirements/signup.md)
 2. [Login](./requirements/login.md)
